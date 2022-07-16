@@ -1,7 +1,7 @@
 /**
- * @file thread_pool_test.c
+ * @file thread_pool_demo.c
  * @author tjl
- * @brief  线程池测试
+ * @brief  线程池demo
  * @version 0.1
  * @date 2022-03-26
  * 
@@ -55,7 +55,7 @@ int main(int argc, char **argv) {
     }
     printf("thread num: %d, task queue size: %d\n", tn, qn);
 
-    tp_t *tp = tp_create(tn);
+    tp_t *tp = tp_create(tn, pn);
     if (!tp) {
         printf("[error]: %s failed", __FUNCTION__);
         return 1;
